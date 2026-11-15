@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cẩm nang kiến thức và kỹ năng an toàn sức khỏe trong cuộc sống hằng ngày.">
+  <title>Sống Khỏe Mỗi Ngày | An toàn sức khỏe</title>
+  <style>
+    :root{--green:#147d68;--green2:#0c5f50;--mint:#e9f7f2;--ink:#18332e;--muted:#62736e;--cream:#fbfdfb;--orange:#f4a340}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #e7efeb}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--green2)}
+    .logo{width:38px;height:38px;border-radius:12px;background:var(--green);display:grid;place-items:center;color:white;font-size:22px}
+    .links{display:flex;gap:25px;color:#405a53;font-size:14px;font-weight:600}.links a:hover{color:var(--green)}
+    .navbtn,.btn{background:var(--green);color:#fff;padding:11px 18px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+    .hero{padding:76px 0 68px;background:linear-gradient(120deg,#eaf8f2 0%,#f7fbf6 65%,#fff4e5 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:45px}
+    .eyebrow{display:inline-block;background:#d7eee5;color:var(--green2);padding:7px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    h1{font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-1.8px;margin:18px 0;color:#163d34}
+    .hero p{font-size:17px;color:var(--muted);max-width:560px;margin:0 0 26px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn.secondary{background:white;color:var(--green2);border:1px solid #cfe4db}
+    .visual{min-height:330px;border-radius:32px;background:linear-gradient(145deg,#bfe9d9,#e7f6ec);position:relative;display:grid;place-items:center}
+    .heart{width:190px;height:190px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:95px;box-shadow:0 25px 55px #398a7130}
+    .bubble{position:absolute;background:#fff;padding:13px 16px;border-radius:16px;box-shadow:0 10px 30px #245d4c18;font-size:13px;font-weight:700}
+    .b1{top:32px;left:18px}.b2{right:18px;bottom:34px}.b3{right:25px;top:36px}
+    section{padding:70px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 35px}.section-head h2{font-size:32px;margin:0 0 9px;letter-spacing:-.7px}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e7efeb;border-radius:20px;padding:24px;box-shadow:0 8px 25px #18332e08}
+    .ico{width:48px;height:48px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:24px;margin-bottom:15px}
+    .card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.card a{display:inline-block;color:var(--green);font-weight:700;font-size:14px;margin-top:15px}
+    .tips{background:#f0f7f3}.tips-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+    .tips h2{font-size:32px;line-height:1.2;margin:0 0 12px}.tips p{color:var(--muted)}
+    .checklist{background:white;border-radius:22px;padding:25px}.check{display:flex;gap:13px;padding:12px 0;border-bottom:1px solid #edf2ef}.check:last-child{border:0}.check span{color:var(--green);font-weight:900}
+    .emergency{background:#fff4e6;border:1px solid #f8dfbd;border-radius:22px;padding:25px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:25px}
+    .emergency strong{display:block;font-size:19px;color:#7c4b13}.emergency p{margin:4px 0 0;color:#795f40;font-size:14px}
+    .number{font-size:30px;font-weight:900;color:#a85c0b;white-space:nowrap}
+    .quiz{max-width:700px;margin:auto;background:white;border:1px solid #e7efeb;border-radius:22px;padding:28px;box-shadow:0 8px 25px #18332e08}
+    .quiz h3{margin-top:0}.quiz button{margin:6px 6px 6px 0;background:#f0f7f3;color:var(--ink);border:1px solid #dcebe4;border-radius:12px;padding:11px 14px;cursor:pointer}.quiz button:hover{border-color:var(--green);background:#e5f5ee}
+    #feedback{font-weight:700;margin-top:12px;min-height:25px;color:var(--green2)}
+    footer{background:#123f35;color:#d8eee6;padding:35px 0}footer .foot{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}footer p{margin:6px 0;color:#b7d4c9;font-size:13px}
+    @media(max-width:760px){.links{display:none}.hero-grid,.tips-grid{grid-template-columns:1fr}.hero{padding:52px 0}.visual{min-height:260px}.cards{grid-template-columns:1fr}.emergency{align-items:flex-start;flex-direction:column}section{padding:52px 0}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#top"><span class="logo">✚</span> SỐNG KHỎE MỖI NGÀY</a>
+  <div class="links"><a href="#chu-de">Chủ đề</a><a href="#thoi-quen">Thói quen tốt</a><a href="#kiem-tra">Kiểm tra kiến thức</a></div>
+  <a class="navbtn" href="#chu-de">Khám phá</a>
+</nav></header>
+<main id="top">
+  <div class="hero"><div class="wrap hero-grid">
+    <div><span class="eyebrow">Cẩm nang an toàn sức khỏe</span>
+      <h1>Chủ động bảo vệ sức khỏe, an tâm mỗi ngày.</h1>
+      <p>Những kiến thức đơn giản và thiết thực giúp bạn chăm sóc bản thân, phòng tránh rủi ro và xây dựng lối sống lành mạnh cho cả gia đình.</p>
+      <div class="actions"><a class="btn" href="#chu-de">Tìm hiểu ngay</a><a class="btn secondary" href="#thoi-quen">Xem 5 thói quen tốt</a></div>
+    </div>
+    <div class="visual" aria-label="Minh họa sức khỏe"><div class="heart">💚</div><div class="bubble b1">🥗 Ăn uống cân bằng</div><div class="bubble b2">🚶 Vận động mỗi ngày</div><div class="bubble b3">💧 Uống đủ nước</div></div>
+  </div></div>
+
+  <section id="chu-de"><div class="wrap">
+    <div class="section-head"><h2>Kiến thức bạn nên biết</h2><p>Tập trung vào những việc có thể thực hiện ngay để giảm nguy cơ và bảo vệ sức khỏe.</p></div>
+    <div class="cards">
+      <article class="card"><div class="ico">🧼</div><h3>Vệ sinh cá nhân</h3><p>Rửa tay bằng xà phòng, giữ cơ thể sạch sẽ và che miệng khi ho hoặc hắt hơi để hạn chế lây lan mầm bệnh.</p><a href="https://www.who.int/health-topics/hand-hygiene" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+      <article class="card"><div class="ico">🥦</div><h3>Dinh dưỡng an toàn</h3><p>Ăn đa dạng thực phẩm, rửa sạch rau quả, nấu chín kỹ và bảo quản thực phẩm đúng cách.</p><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+      <article class="card"><div class="ico">🏃</div><h3>Vận động & nghỉ ngơi</h3><p>Duy trì vận động phù hợp, ngủ đủ giấc và dành thời gian thư giãn để hỗ trợ sức khỏe thể chất lẫn tinh thần.</p><a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+      <article class="card"><div class="ico">🩹</div><h3>Sơ cứu cơ bản</h3><p>Giữ bình tĩnh, bảo đảm hiện trường an toàn và gọi trợ giúp y tế khi có dấu hiệu nguy hiểm. Chỉ sơ cứu trong khả năng được hướng dẫn.</p><a href="https://www.redcross.org/take-a-class/first-aid" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+      <article class="card"><div class="ico">🧠</div><h3>Sức khỏe tinh thần</h3><p>Chia sẻ với người tin cậy, nghỉ ngơi khi căng thẳng và tìm hỗ trợ chuyên môn khi khó khăn kéo dài.</p><a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+      <article class="card"><div class="ico">🛡️</div><h3>Phòng tránh tai nạn</h3><p>Giữ nhà cửa thông thoáng, cất hóa chất và thuốc ngoài tầm với trẻ em, sử dụng thiết bị bảo hộ phù hợp.</p><a href="https://www.who.int/health-topics/injuries" target="_blank" rel="noopener">Tìm hiểu thêm ↗</a></article>
+    </div>
+  </div></section>
+
+  <section class="tips" id="thoi-quen"><div class="wrap tips-grid">
+    <div><span class="eyebrow">Bắt đầu từ hôm nay</span><h2>5 thói quen nhỏ, lợi ích lớn</h2><p>Không cần thay đổi tất cả trong một ngày. Hãy chọn một việc dễ thực hiện và duy trì đều đặn.</p></div>
+    <div class="checklist">
+      <div class="check"><span>✓</span><div><b>Rửa tay đúng cách</b><br><small>Trước khi ăn và sau khi đi vệ sinh.</small></div></div>
+      <div class="check"><span>✓</span><div><b>Ăn uống đa dạng</b><br><small>Tăng rau quả và chọn thực phẩm an toàn.</small></div></div>
+      <div class="check"><span>✓</span><div><b>Vận động thường xuyên</b><br><small>Chọn hình thức phù hợp với thể trạng.</small></div></div>
+      <div class="check"><span>✓</span><div><b>Ngủ và nghỉ ngơi hợp lý</b><br><small>Duy trì lịch sinh hoạt đều đặn.</small></div></div>
+      <div class="check"><span>✓</span><div><b>Khám sức khỏe định kỳ</b><br><small>Trao đổi với nhân viên y tế về nhu cầu cá nhân.</small></div></div>
+    </div>
+  </div></section>
+
+  <section id="kiem-tra"><div class="wrap">
+    <div class="section-head"><h2>Thử thách kiến thức</h2><p>Một câu hỏi nhanh để bạn tự kiểm tra thói quen an toàn.</p></div>
+    <div class="quiz"><h3>Khi nào bạn nên rửa tay bằng xà phòng?</h3>
+      <button onclick="answer(false)">Chỉ khi tay nhìn thấy bẩn</button>
+      <button onclick="answer(true)">Trước khi ăn và sau khi đi vệ sinh</button>
+      <button onclick="answer(false)">Chỉ vào buổi sáng</button>
+      <div id="feedback" aria-live="polite"></div>
+    </div>
+    <div class="emergency"><div><strong>Trường hợp khẩn cấp?</strong><p>Nếu có dấu hiệu đe dọa tính mạng, hãy gọi cấp cứu hoặc đến cơ sở y tế gần nhất. Tại Việt Nam, số cấp cứu y tế là 115.</p></div><div class="number">115</div></div>
+  </div></section>
+</main>
+<footer><div class="wrap foot"><div><b>✚ SỐNG KHỎE MỖI NGÀY</b><p>Chia sẻ kiến thức để sống an toàn và lành mạnh hơn.</p></div><p>Thông tin trên website chỉ mang tính giáo dục, không thay thế chẩn đoán hoặc tư vấn y tế cá nhân.</p></div></footer>
+<script>
+function answer(correct){
+  const f=document.getElementById('feedback');
+  f.textContent=correct?'Chính xác! Đây là những thời điểm quan trọng để rửa tay.':'Chưa đúng. Hãy chọn đáp án nói về thời điểm trước khi ăn và sau khi đi vệ sinh.';
+  f.style.color=correct?'#147d68':'#a85c0b';
+}
+</script>
+</body>
+</html>
